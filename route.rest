@@ -1,13 +1,11 @@
-GET http://localhost:3000/
+GET .......
 
 ###
 
 
-Post http://localhost:3000/delete/63591cac9f221070167f3403
-Content-Type: application/json
+Post ..............
+// 
 
 {
-   "name": "bla",
-   "author": "bla"
+   /////
 }
-
