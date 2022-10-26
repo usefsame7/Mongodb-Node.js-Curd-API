@@ -6,9 +6,6 @@ require('dotenv').config()
 
 
 
-
-
-
   app.listen(3000, () => {
       console.log("Server is running on port 3000 ...");
     });
@@ -32,7 +29,6 @@ app.use(express.json())
 
 
   // get all books
-
   app.get('/',  (req, res) => {
    Book.find({}, (error, list) => {
     res.json(list);
@@ -41,7 +37,6 @@ app.use(express.json())
 
 
     // add new book
-
    app.post('/',  (req, res) => {
   const book = new Book(req.body);
    
@@ -51,11 +46,7 @@ app.use(express.json())
 });
 
 
-
-
-
-  // update a specific book by id 
-    
+  // update a specific book by id     
   app.post('/update/:id', (req, res) => {
    let id = req.params.id;
      Book.findByIdAndUpdate(
@@ -74,10 +65,7 @@ app.use(express.json())
 });
 
 
-
-
   //  delete a specific book by id 
-
   app.post('/delete/:id', (req, res) => {
        let id = req.params.id;
          Book.findByIdAndRemove(id, (err, result) => {
@@ -87,3 +75,4 @@ app.use(express.json())
              res.json({ message: 'book deleted'});     
          })
       });
+
