@@ -1,0 +1,13 @@
+GET http://localhost:3000/
+
+###
+
+
+Post http://localhost:3000/delete/63591cac9f221070167f3403
+Content-Type: application/json
+
+{
+   "name": "bla",
+   "author": "bla"
+}
+
