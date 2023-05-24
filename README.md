@@ -96,5 +96,17 @@ Response:
 ]
 ```
 
+### add a new Book
 
-**Thanks For Reading . Regards.Y
+```http
+POST /new_book
+```
+request body: 
+```json
+{
+  "name":"Atomic Habits",
+  "auther":"james clear"
+}
+```
+
+**Thanks For Reading . Regards.Y**
