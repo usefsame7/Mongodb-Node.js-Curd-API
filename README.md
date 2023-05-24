@@ -1,6 +1,6 @@
-# MongoDB Node.js CRUD API
+# Books API
 
-This is a RESTful API built with Node.js and MongoDB for performing CRUD (Create, Read, Update, Delete) operations on a MongoDB database. The API provides endpoints to interact with the database and perform various operations on the data.
+The Books Project is a Node.js-based API that allows you to perform CRUD (Create, Read, Update, Delete) operations on a MongoDB database for managing books. This API provides endpoints to interact with the database and perform various operations on book data.
 
 ## Prerequisites
 
@@ -45,29 +45,27 @@ The API will now be running on `http://localhost:3000`.
 
 The following endpoints are available for interacting with the API:
 
-- `GET /api/employees` - Retrieve all employees
-- `GET /api/employees/:id` - Retrieve a specific employee by ID
-- `POST /api/employees` - Create a new employee
-- `PUT /api/employees/:id` - Update an employee by ID
-- `DELETE /api/employees/:id` - Delete an employee by ID
+- `GET /all_books` - Retrieve all books
+- `POST /new_book` - Create a new book
+- `POST /update/:id` - Update a book by ID
+- `DELETE /delete/:id` - Delete a book by ID
 
 ## Request and Response Formats
 
-### Employee Object
+### Book Object
 
-An employee object has the following structure:
+A book object has the following structure:
 
 ```json
 {
-  "name": "John Doe",
-  "designation": "Software Engineer",
-  "salary": 5000
+  "name": "Book name",
+  "author": "Author Name",
 }
 ```
 
 ### Request Format
 
-For creating or updating an employee, the request body should contain a JSON object with the employee data.
+For creating or updating a book, the request body should contain a JSON object with the book data.
 
 ### Response Format
 
@@ -75,10 +73,10 @@ The API responses will be in JSON format.
 
 ## Examples
 
-### Get all employees
+### Get all books
 
 ```http
-GET /api/employees
+GET /all_books
 ```
 
 Response:
@@ -87,27 +85,16 @@ Response:
 [
   {
     "_id": "60a715b63a77d243d8fe8d0f",
-    "name": "John Doe",
-    "designation": "Software Engineer",
-    "salary": 5000
+    "name": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
   },
   {
     "_id": "60a715b63a77d243d8fe8d10",
-    "name": "Jane Smith",
-    "designation": "Product Manager",
-    "salary": 7000
+    "name": "To Kill a Mockingbird",
+    "author": "Harper Lee",
   }
 ]
 ```
 
-### Get a specific employee
 
-```http
-GET /api/employees/60a715b63a77d243d8fe8d0f
-```
-
-Response:
-
-```json
-{
-  "_id": "60a715b63a77d243d8fe8d0f",
+**Thanks For Reading . Regards.Y
