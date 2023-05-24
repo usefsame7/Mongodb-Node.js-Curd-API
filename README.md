@@ -96,7 +96,7 @@ Response:
 ]
 ```
 
-### add a new Book
+### Add a new Book
 
 ```http
 POST /new_book
@@ -108,5 +108,18 @@ request body:
   "auther":"james clear"
 }
 ```
+response object: 
+```json
+{
+  "_id":"10a715b63a77d2434ree8d23",
+  "name":"Atomic Habits",
+  "auther":"james clear"
+}
+```
+
+
+
+
+
 
 **Thanks For Reading . Regards.Y**
